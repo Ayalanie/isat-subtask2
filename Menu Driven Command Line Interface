@@ -1,0 +1,47 @@
+int main() {
+    int choice, decimal;
+    string binary, hex;
+    while (true) {
+        cout << "Menu:\n";
+        cout << "1. Convert Decimal to Binary\n";
+        cout << "2. Convert Binary to Decimal\n";
+        cout << "3. Convert Decimal to Hexadecimal\n";
+        cout << "4. Convert Hexadecimal to Decimal\n";
+        cout << "5. Demo\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter decimal number: ";
+                cin >> decimal;
+                cout << "Binary: " << decimalToBinary(decimal) << endl;
+                break;
+            case 2:
+                cout << "Enter binary number: ";
+                cin >> binary;
+                cout << "Decimal: " << binaryToDecimal(binary) << endl;
+                break;
+            case 3:
+                cout << "Enter decimal number: ";
+                cin >> decimal;
+                cout << "Hexadecimal: " << decimalToHexadecimal(decimal) << endl;
+                break;
+            case 4:
+                cout << "Enter hexadecimal number: ";
+                cin >> hex;
+                cout << "Decimal: " << hexadecimalToDecimal(hex) << endl;
+                break;
+            case 5:
+                decimal = rand() % 100;
+                cout << "Random number: " << decimal << endl;
+                cout << "Binary: " << decimalToBinary(decimal) << endl;
+                break;
+            case 6:
+                return 0;
+            default:
+                cout << "Invalid choice. Try again.\n";
+        }
+    }
+}
