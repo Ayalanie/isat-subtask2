@@ -1,0 +1,9 @@
+string decimalToHexadecimal(int decimal) {
+    string hex = "";
+    char hexDigits[] = "0123456789ABCDEF";
+    while (decimal > 0) {
+        hex = hexDigits[decimal % 16] + hex;
+        decimal /= 16;
+    }
+    return hex.empty() ? "0" : hex;
+}
